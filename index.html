@@ -5,14 +5,35 @@
     <title>Form</title>
 </head>
 <body>
-    <h1 id="h1">Exam Registration Form</h1>
-    <form action="" class="form" id="form">
-        <label for="fname">First name:</label><br><input type="text" name="fname" id="fname" required><br>
-        <label for="lname">Last name:</label><br><input type="text" id="lname" name="lname" required><br>
-        <label for="email">Email:</label><br><input type="email" name="email" id="email"  pattern=".+@gmail\.com" required><br>
-        <label for="age">Age:</label><br><input type="number" name="age" id="age" required><br>
-        <input type="button" value="submit" onclick="check()">
-    </form>
+    <main class="container">
+        <div class="exam-form">
+            <h1 id="exam-h1">Exam Registration Form</h1>
+            <form action="" class="form" id="form">
+                <label for="fname">First name:</label><br><input type="text" name="fname" id="fname" required><br>
+                <label for="lname">Last name:</label><br><input type="text" id="lname" name="lname" required><br>
+                <label for="email">Email:</label><br><input type="email" name="email" id="email"  pattern=".+@gmail\.com" required><br>
+                <label for="age">Age:</label><br><input type="number" name="age" id="age" required><br>
+                <input type="button" value="submit" onclick="check()">
+            </form>
+        </div>
+        <div class="registered">
+            <h1>You have registered for the Exam</h1>
+            <div class="container">
+                <div id="r-fname"class="r-fname"><h2>First name:<span id="span-fname"></span></h2></div>
+                <div id="r-lname"class="r-lname"><h2>Last name:<span id="span-lname"></span></h2></div>
+                <div id="r-email"class="r-email"><h2>Email:<span id="span-email"></span></h2></div>
+                <div id="r-age"class="r-age"><h2>Age:<span id="span-age"></span></h2></div>
+                <div id="r-center"class="r-center"><h2>Exam Center:<span id="span-center"></span></h2></div>
+            </div>
+        </div>
+        <div class="notelegible">
+            <h1>Sorry u are not Elegible for the Exam <br> Age must be between 18-24</h1>
+            <div class="container">
+                <div class="n-age"><h2>Your age:<span id="n-age"></span></h2></div>
+            </div>
+        </div>
+    </main>
+    
     
 </body>
 <script src="index.js"></script>

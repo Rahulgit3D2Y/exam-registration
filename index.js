@@ -4,7 +4,7 @@ function check()
     var lname=document.getElementById('lname').value
     var email=document.getElementById('email').value
     var age=document.getElementById('age').value
-    
+    /*
     if(!fname || !lname  || !age)
     {
         alert('plz enter values in the fields')
@@ -18,8 +18,25 @@ function check()
     else
     {
     if(age>=18 && age<=24)
-        window.location.href="registered.html"
+    {
+        registered()
+    } 
     else
-        window.location.href="notelegible.html"
+        console.log('b')
     }
+*/notelegible()
+}
+function registered()
+{
+    var state = [ "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttarakhand","Uttar Pradesh","West Bengal","Andaman and Nicobar Islands","Chandigarh","Dadra and Nagar Haveli","Daman and Diu","Delhi","Lakshadweep","Puducherry"]
+    const random = Math.floor(Math.random() * state.length);
+    document.getElementById('span-fname').innerText=fname.value
+    document.getElementById('span-lname').innerText=lname.value
+    document.getElementById('span-email').innerText=email.value
+    document.getElementById('span-age').innerText=age.value
+    document.getElementById('span-center').innerText=state[random]
+}
+function notelegible()
+{
+    document.getElementById('n-age').innerText=age.value
 }
