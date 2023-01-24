@@ -4,9 +4,16 @@ function check()
     var lname=document.getElementById('lname').value
     var email=document.getElementById('email').value
     var age=document.getElementById('age').value
-    if(!fname || !lname|| !email  || !age)
+    
+    if(!fname || !lname  || !age)
     {
-        confirm('plz enter values in the fields')
+        alert('plz enter values in the fields')
+        
+    }
+    if (!/@gmail\.com$/.test(email)) 
+    {
+        // This is a gmail id.
+        alert("enter a @gmail.com id")
     }
     else
     {
