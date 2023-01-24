@@ -1,0 +1,71 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+
+    background-color: white
+}
+h1
+{
+    background-image: linear-gradient(blue ,red);
+
+}
+main
+{   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.notelegible
+{
+    display: none;
+}
+.exam-form,.registerd,.notelegible
+{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.form
+{   
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    border-radius: 30% 70% 70% 30% / 30% 41% 59% 70% ;
+    background-color: aqua;
+    padding: 3rem 7rem;
+}
+.fname,.lname,.email,.age,.submit
+{
+    font-size: 20px;
+    font-weight: bolder;
+    color: red;
+}
+#fname,#lname,#email,#age,#submit
+{
+    border: none;
+    padding:10px 70px;
+    border-radius: 1rem;
+}
+.r-container,.n-container
+{
+    border-radius: 30% 70% 70% 30% / 30% 41% 59% 70% ;
+    background-color: aqua;
+    padding: 3rem 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.r-fname,.r-lname,.r-email,.r-age,.r-center,.n-age
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
