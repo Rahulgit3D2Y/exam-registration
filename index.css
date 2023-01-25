@@ -13,6 +13,9 @@
     --Darkblue: hsl(235, 46%, 20%);
     --Desaturatedblue: hsl(235, 45%, 61%);
     --PaleBlue: hsl(236, 100%, 87%);
+    --short-animation-time: .5s;
+    --medium-animation-duration: 1s;
+    --big-animation-duration: 3s;
 }
 *
 {
@@ -30,6 +33,7 @@ body
 }
 h1
 {
+    animation: heading-slide var(--big-animation-duration) ease-in-out infinite;
     color: var(--Desaturatedblue)
 }
 
@@ -58,13 +62,14 @@ main
     display: flex;
     gap: 8px;
     flex-direction: column;
-    border-radius: 30% 70% 70% 30% / 30% 41% 59% 70% ;
+    
     background-image: linear-gradient(90deg,var(--Light_red),var(--Blue));
     background-color: var(--Blue);
     box-shadow: -10vmin 10vmin 0 rgba(255,255,255,0.07);
     padding: 40px 100px 60px 50px; 
+    animation: spin 15s ease-in-out  infinite;
 }
-#submit
+#submit,.return
 {   
     background-color: var(--PaleBlue);
     color: var(--Violet);
@@ -73,8 +78,9 @@ main
     border: none;
     border-radius: 1rem;
     padding: 5px 0;
+    margin: 0 20px;
 }
-#submit:hover
+#submit:hover,.return:hover
 {
     background-color:var(--Violet) ;
     color: var(--PaleBlue);
@@ -93,13 +99,13 @@ main
 }
 .r-container,.n-container
 {
-    border-radius: 30% 70% 70% 30% / 30% 41% 59% 70% ;
     background-image: linear-gradient(120deg,var(--Blue),var(--Light_red));
     box-shadow: -10vmin 10vmin 0 rgba(255,255,255,0.07);
     padding: 40px 100px 60px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    animation: nspin 15s ease-in-out  infinite;
 }
 h2
 {
@@ -126,4 +132,49 @@ span
 {
     justify-self: flex-end;
 }*/
-
+@keyframes heading-slide {
+    0%,100%
+    {
+        transform: translateY(-10%);
+    }
+    50%
+    {
+        transform: translateY(10%);
+    }
+}
+@keyframes spin {
+    0%,100%
+    {   
+        border-radius:30% 70% 70% 30% / 30% 41% 59% 70% ;
+    }
+    25%
+    {
+        border-radius:44% 56% 39% 61% / 77% 66% 34% 23% ;
+    }
+    50%
+    {
+        border-radius: 76% 24% 45% 55% / 25% 25% 75% 75%   ;
+    }
+    75%
+    {
+        border-radius:35% 65% 77% 23% / 42% 31% 69% 58%  ;   
+    }
+}
+@keyframes nspin {
+    0%,100%
+    {   
+        border-radius:30% 70% 70% 30% / 30% 41% 59% 70% ;
+    }
+    75%
+    {
+        border-radius:24% 76% 39% 61% / 77% 66% 34% 23% ;
+    }
+    50%
+    {
+        border-radius: 76% 24% 45% 55% / 25% 25% 75% 75%   ;
+    }
+    25%
+    {
+        border-radius:35% 65% 77% 23% / 42% 31% 69% 58%  ;   
+    }
+}

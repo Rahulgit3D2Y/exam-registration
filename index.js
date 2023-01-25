@@ -9,10 +9,10 @@ function check()
         alert('plz enter values in the fields')
         
     }
-    if (!/@gmail\.com$/.test(email)) 
+    else if (!/@gmail\.com$/.test(email)) 
     {
         // This is a gmail id.
-        alert("enter a @gmail.com id")
+        alert("enter a valid @gmail.com id")
     }
     else
     {
@@ -42,4 +42,14 @@ function notelegible()
     document.getElementById("notelegible").style.display="block"
     document.getElementById("exam-form").style.display="none"
     document.getElementById('n-age').innerText=age.value
+}
+function ret()
+{
+    document.getElementById("exam-form").style.display="block"
+    document.getElementById("registered").style.display="none"
+}
+function nret()
+{
+    document.getElementById("exam-form").style.display="block"
+    document.getElementById("notelegible").style.display="none"
 }

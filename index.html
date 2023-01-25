@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="index.css">
-    <title>Form</title>
+    <title>Exam-Form</title>
 </head>
 <body>
     <main>
         <div class="exam-form" id="exam-form">
             <h1 id="exam-h1">Exam Registration Form</h1>
             <form action="" class="form" id="form">
-                <label for="fname" class="fname">First name:</label><input type="text" name="fname" id="fname" required>
-                <label for="lname" class="lname">Last name:</label><input type="text" id="lname" name="lname" required>
-                <label for="email" class="email">Email:</label><input type="email" name="email" id="email"  pattern=".+@gmail\.com" required>
+                <label for="fname" class="fname">First name:</label><input type="text" name="fname" id="fname" maxlength="50"required><span></span>
+                <label for="lname" class="lname">Last name:</label><input type="text" id="lname" name="lname" maxlength="50"required>
+                <label for="email" class="email">Email:</label><input type="email" name="email" id="email" maxlength="30" required>
                 <label for="age" class="age">Age:</label><input type="number" name="age" id="age" required>
                 <input type="button" value="submit" id="submit" onclick="check()">
             </form>
@@ -34,13 +34,14 @@
                 <div id="r-center"class="r-center">
                     <h2>Exam Center:</h2><span id="span-center"></span>
                 </div>
+                <button class="return" id="r-return" onclick="ret()">Return to Registration form</button>
             </div>
         </div>
         <div class="notelegible" id="notelegible">
             <div class="n-container">
-            <h2>Sorry u are not Elegible for the Exam <br> Age must be between 18-24</h2>    
+            <h2>Sorry! Elegible for the Exam <br> Age must be between 18-24</h2>
+            <button class="return" id="n-return" onclick="nret()">Return to Registration form</button>    
             </div>
-            
         </div>
     </main>
     
