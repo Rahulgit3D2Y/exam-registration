@@ -29,13 +29,13 @@ function registered()
 {
     document.getElementById("registered").style.display="block"
     document.getElementById("exam-form").style.display="none"
-    var state = [ "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttarakhand","Uttar Pradesh","West Bengal","Andaman and Nicobar Islands","Chandigarh","Dadra and Nagar Haveli","Daman and Diu","Delhi","Lakshadweep","Puducherry"]
-    const random = Math.floor(Math.random() * state.length);
+    var city = [ "Agra","Goa","Assam","Bihar","Gujarat","Jharkhand","Karnataka","Kerala","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Chandigarh","Delhi"]
+    const random = Math.floor(Math.random() * city.length);
     document.getElementById('span-fname').innerText=fname.value
     document.getElementById('span-lname').innerText=lname.value
     document.getElementById('span-email').innerText=email.value
     document.getElementById('span-age').innerText=age.value
-    document.getElementById('span-center').innerText=state[random]
+    document.getElementById('span-center').innerText=city[random]
 }
 function notelegible()
 {

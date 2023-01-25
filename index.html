@@ -5,7 +5,7 @@
     <title>Form</title>
 </head>
 <body>
-    <main class="container">
+    <main>
         <div class="exam-form" id="exam-form">
             <h1 id="exam-h1">Exam Registration Form</h1>
             <form action="" class="form" id="form">
@@ -15,7 +15,7 @@
                 <label for="age" class="age">Age:</label><input type="number" name="age" id="age" required>
                 <input type="button" value="submit" id="submit" onclick="check()">
             </form>
-        </div>
+        </div>    
         <div class="registered" id="registered">
             <h1>You have registered for the Exam</h1>
             <div class="r-container">
@@ -37,10 +37,10 @@
             </div>
         </div>
         <div class="notelegible" id="notelegible">
-            <h1>Sorry u are not Elegible for the Exam <br> Age must be between 18-24</h1>
             <div class="n-container">
-                <div class="n-age"><h2>Your age:<span id="n-age"></span></h2></div>
+            <h2>Sorry u are not Elegible for the Exam <br> Age must be between 18-24</h2>    
             </div>
+            
         </div>
     </main>
     

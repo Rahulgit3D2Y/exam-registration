@@ -1,32 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root
+{
+    --Blue: hsl(246, 80%, 60%);
+    --orange: hsl(15, 100%, 70%);
+    --Soft_blue : hsl(195, 74%, 62%);
+    --Light_red: hsl(348, 100%, 68%);
+    --Lime_green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft_orange: hsl(43, 84%, 65%);
+    --Verydarkblue: hsl(226, 43%, 10%);
+    --Darkblue: hsl(235, 46%, 20%);
+    --Desaturatedblue: hsl(235, 45%, 61%);
+    --PaleBlue: hsl(236, 100%, 87%);
+}
 *
 {
-    padding: 0;
+    padding: 0px;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 body
 {
-
-    background-color: white
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--Verydarkblue);
 }
 h1
 {
-    background-image: linear-gradient(blue ,red);
-
+    color: var(--Desaturatedblue)
 }
+
 main
-{   
+{
+    min-width: 375px;
+    padding: 20px 10%;   
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
 }
-.notelegible
+.notelegible,.registered
 {
     display: none;
 }
-.exam-form,.registerd,.notelegible
+.exam-form
 {   
     display: flex;
     flex-direction: column;
@@ -36,19 +56,36 @@ main
 .form
 {   
     display: flex;
-    gap: 1rem;
+    gap: 8px;
     flex-direction: column;
     border-radius: 30% 70% 70% 30% / 30% 41% 59% 70% ;
-    background-color: aqua;
-    padding: 3rem 7rem;
+    background-image: linear-gradient(90deg,var(--Light_red),var(--Blue));
+    background-color: var(--Blue);
+    box-shadow: -10vmin 10vmin 0 rgba(255,255,255,0.07);
+    padding: 40px 100px 60px 50px; 
 }
-.fname,.lname,.email,.age,.submit
+#submit
+{   
+    background-color: var(--PaleBlue);
+    color: var(--Violet);
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    padding: 5px 0;
+}
+#submit:hover
+{
+    background-color:var(--Violet) ;
+    color: var(--PaleBlue);
+}
+.fname,.lname,.email,.age
 {
     font-size: 20px;
     font-weight: bolder;
-    color: red;
+    color: var(--PaleBlue);
 }
-#fname,#lname,#email,#age,#submit
+#fname,#lname,#email,#age
 {
     border: none;
     padding:10px 70px;
@@ -57,15 +94,36 @@ main
 .r-container,.n-container
 {
     border-radius: 30% 70% 70% 30% / 30% 41% 59% 70% ;
-    background-color: aqua;
-    padding: 3rem 7rem;
+    background-image: linear-gradient(120deg,var(--Blue),var(--Light_red));
+    box-shadow: -10vmin 10vmin 0 rgba(255,255,255,0.07);
+    padding: 40px 100px 60px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
+h2
+{
+    color: var(--Light_red);
+}
+span
+{
+    color: var(--PaleBlue);
+    font-size: larger;
+    font-weight: bold;
+}
 .r-fname,.r-lname,.r-email,.r-age,.r-center,.n-age
 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    padding: 20px;
 }
+/*#span-fname,
+#span-lname,
+#span-email,
+#span-age,#span-center
+{
+    justify-self: flex-end;
+}*/
 
